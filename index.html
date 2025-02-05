@@ -12,15 +12,36 @@
             padding: 0;
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
-            text-align: center;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px;
+        }
+        .menu a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 20px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        .menu a:hover {
+            background-color: #575757;
         }
         .container {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
             max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .header {
-            padding: 3rem 0;
+        .left-panel {
+            margin-right: 20px;
+            flex: 0 0 180px;
+            text-align: center;
         }
         .profile-photo {
             width: 180px;
@@ -31,6 +52,10 @@
         }
         .profile-photo:hover {
             transform: scale(1.1);
+        }
+        .right-panel {
+            flex: 1;
+            padding: 20px;
         }
         .section {
             background: rgba(255, 255, 255, 0.15);
@@ -52,88 +77,85 @@
         a:hover {
             color: #ffffff;
         }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-        }
-        .project-card {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 1.5rem;
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="https://github.com/jintubhuyan-2000.png" class="profile-photo" alt="Profile Photo">
-        <h1>Jintu Moni Bhuyan</h1>
-        <p>Remote Sensing | Carbon Cycle Research | UAV & AI Expert</p>
-        <p>📞 +91 7002134518 | 📧 <a href="mailto:jintumb6@gmail.com">jintumb6@gmail.com</a></p>
-        <p>🔗 <a href="https://www.linkedin.com/in/jintu-moni-bhuyan-4700b51b1/" target="_blank">LinkedIn Profile</a></p>
+    <!-- Menu -->
+    <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </div>
 
     <div class="container">
-        <div class="section">
-            <h2>Education</h2>
-            <p>🎓 M.Tech Remote Sensing & GIS (8.48 CGPA) - IIRS, ISRO</p>
-            <p>🌍 M.Sc Environmental Science (8.81 CGPA) - Gauhati University</p>
-            <p>📖 DGCA Certified UAV Pilot (up to 25 kg)</p>
+        <!-- Left Panel (Profile) -->
+        <div class="left-panel">
+            <img src="https://github.com/jintubhuyan-2000.png" class="profile-photo" alt="Profile Photo">
+            <h1>Jintu Moni Bhuyan</h1>
+            <p>Remote Sensing | Carbon Cycle Research | UAV & AI Expert</p>
+            <p>📞 +91 7002134518 | 📧 <a href="mailto:jintumb6@gmail.com">jintumb6@gmail.com</a></p>
+            <p>🔗 <a href="https://www.linkedin.com/in/jintu-moni-bhuyan-4700b51b1/" target="_blank">LinkedIn Profile</a></p>
         </div>
 
-        <div class="section">
-            <h2>Specialization & Research</h2>
-            <ul>
-                <li>Forest Carbon Dynamics & Bookkeeping Modeling</li>
-                <li>UAV & LiDAR Applications in Environmental Monitoring</li>
-                <li>Machine Learning & AI in Remote Sensing</li>
-            </ul>
-        </div>
+        <!-- Right Panel (Content) -->
+        <div class="right-panel">
+            <div class="section">
+                <h2>Education</h2>
+                <p>🎓 M.Tech Remote Sensing & GIS (8.48 CGPA) - IIRS, ISRO</p>
+                <p>🌍 M.Sc Environmental Science (8.81 CGPA) - Gauhati University</p>
+                <p>📖 DGCA Certified UAV Pilot (up to 25 kg)</p>
+            </div>
 
-        <div class="section">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Carbon Bookkeeping Model</h3>
-                    <p>Analyzing deforestation impact in the Eastern Himalayas.</p>
-                    <a href="https://github.com/jintubhuyan-2000/Carbon-Matrix-V1.4" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Habitat Suitability Mapping</h3>
-                    <p>Conserving Indian Pangolins in Uttarakhand.</p>
-                    <a href="https://github.com/jintubhuyan-2000/Habitat-Suitability-Mapping-IPYNB" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Forest Fire Risk Analysis</h3>
-                    <p>GIS-based AHP modeling for risk mitigation.</p>
+            <div class="section">
+                <h2>Specialization & Research</h2>
+                <ul>
+                    <li>Forest Carbon Dynamics & Bookkeeping Modeling</li>
+                    <li>UAV & LiDAR Applications in Environmental Monitoring</li>
+                    <li>Machine Learning & AI in Remote Sensing</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Carbon Bookkeeping Model</h3>
+                        <p>Analyzing deforestation impact in the Eastern Himalayas.</p>
+                        <a href="https://github.com/jintubhuyan-2000/Carbon-Matrix-V1.4" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Habitat Suitability Mapping</h3>
+                        <p>Conserving Indian Pangolins in Uttarakhand.</p>
+                        <a href="https://github.com/jintubhuyan-2000/Habitat-Suitability-Mapping-IPYNB" target="_blank">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Forest Fire Risk Analysis</h3>
+                        <p>GIS-based AHP modeling for risk mitigation.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="section">
-            <h2>Technical Skills</h2>
-            <p>🖥️ Python, R, JavaScript (Earth Engine), ML & AI</p>
-            <p>🛰️ ArcGIS, QGIS, Google Earth Engine, LiDAR Processing</p>
-            <p>🌱 Forest Ecology, Carbon Dynamics, Climate Modeling</p>
-        </div>
+            <div class="section">
+                <h2>Technical Skills</h2>
+                <p>🖥️ Python, R, JavaScript (Earth Engine), ML & AI</p>
+                <p>🛰️ ArcGIS, QGIS, Google Earth Engine, LiDAR Processing</p>
+                <p>🌱 Forest Ecology, Carbon Dynamics, Climate Modeling</p>
+            </div>
 
-        <div class="section">
-            <h2>Publications</h2>
-            <ul>
-                <li>Bhuyan & Sharma (2023) - Wetland Water Quality Study</li>
-                <li>Bhuyan (2021) - Environmental Degradation Analysis</li>
-            </ul>
-        </div>
+            <div class="section">
+                <h2>Publications</h2>
+                <ul>
+                    <li>Bhuyan & Sharma (2023) - Wetland Water Quality Study</li>
+                    <li>Bhuyan (2021) - Environmental Degradation Analysis</li>
+                </ul>
+            </div>
 
-        <div class="section">
-            <h2>Contact</h2>
-            <p>📍 Flat No. 11, Lake Site CHS Ltd, Opp. IITB Main Gate, Powai, Mumbai</p>
-            <p>📧 Institutional Email: 30005896@iitb.ac.in</p>
-            <p>🔗 <a href="https://github.com/jintubhuyan-2000/CV/blob/main/CV_JINTUMONIBHUYAN.pdf" target="_blank">Download CV</a></p>
+            <div class="section">
+                <h2>Contact</h2>
+                <p>📍 Flat No. 11, Lake Site CHS Ltd, Opp. IITB Main Gate, Powai, Mumbai</p>
+                <p>📧 Institutional Email: 30005896@iitb.ac.in</p>
+                <p>🔗 <a href="https://github.com/jintubhuyan-2000/CV/blob/main/CV_JINTUMONIBHUYAN.pdf" target="_blank">Download CV</a></p>
+            </div>
         </div>
     </div>
 </body>
