@@ -12,28 +12,33 @@
             padding: 0;
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
+            text-align: center;
         }
         .container {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
         .header {
-            text-align: center;
             padding: 3rem 0;
         }
         .profile-photo {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            border: 4px solid #fff;
+            border: 5px solid #ffcc00;
+            transition: transform 0.3s ease-in-out;
+        }
+        .profile-photo:hover {
+            transform: scale(1.1);
         }
         .section {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             padding: 2rem;
             margin: 1rem 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: left;
         }
         h1, h2 {
             color: #ffcc00;
@@ -42,11 +47,24 @@
             color: #ffcc00;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #ffffff;
         }
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1rem;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
@@ -79,17 +97,17 @@
         <div class="section">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <div>
+                <div class="project-card">
                     <h3>Carbon Bookkeeping Model</h3>
                     <p>Analyzing deforestation impact in the Eastern Himalayas.</p>
                     <a href="https://github.com/jintubhuyan-2000/Carbon-Matrix-V1.4" target="_blank">View Project</a>
                 </div>
-                <div>
+                <div class="project-card">
                     <h3>Habitat Suitability Mapping</h3>
                     <p>Conserving Indian Pangolins in Uttarakhand.</p>
                     <a href="https://github.com/jintubhuyan-2000/Habitat-Suitability-Mapping-IPYNB" target="_blank">View Project</a>
                 </div>
-                <div>
+                <div class="project-card">
                     <h3>Forest Fire Risk Analysis</h3>
                     <p>GIS-based AHP modeling for risk mitigation.</p>
                 </div>
