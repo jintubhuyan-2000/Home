@@ -1,180 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jintu Moni Bhuyan - Profile</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
-        }
-        .header {
-            background: #1e3c72;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        .profile {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #1e3c72;
-        }
-        .profile h1 {
-            margin: 10px 0 5px;
-            color: #1e3c72;
-        }
-        .profile p {
-            margin: 5px 0;
-        }
-        .section {
-            margin-bottom: 20px;
-            padding: 15px;
-            border-left: 4px solid #1e3c72;
-            background: #f9f9f9;
-        }
-        h2 {
-            color: #1e3c72;
-        }
-        a {
-            color: #1e3c72;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jintu Moni Bhuyan - Profile</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    /* Header Section */
+    .header {
+      background: #1e3c72;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background: #16325c;
+      padding: 10px 0;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .navbar a:hover {
+      background: #1e3c72;
+      border-radius: 5px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    /* Dynamic Block */
+    .dynamic-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .dynamic-block img {
+      width: 280px;
+      height: auto;
+      border-radius: 10px;
+      border: 3px solid #1e3c72;
+    }
+    .dynamic-text {
+      flex: 1;
+      margin-left: 20px;
+    }
+    .dynamic-text h2 {
+      color: #1e3c72;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-left: 4px solid #1e3c72;
+      background: #f9f9f9;
+    }
+    h2 {
+      color: #1e3c72;
+    }
+
+    /* Links */
+    a {
+      color: #1e3c72;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .dynamic-block {
+        flex-direction: column;
+        text-align: center;
+      }
+      .dynamic-text {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Jintu Moni Bhuyan</h1>
-        <p>Remote Sensing | Carbon Cycle Research | UAV & AI Expert</p>
+  <!-- Header -->
+  <div class="header">
+    <h1>Jintu Moni Bhuyan</h1>
+    <p>Remote Sensing | Carbon Cycle Research | UAV & AI Expert</p>
+  </div>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#research">Research Interests</a>
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="container" id="home">
+    <!-- First Dynamic Block -->
+    <div class="dynamic-block">
+      <img src="https://github.com/jintubhuyan-2000/Home/blob/main/Gemini_Generated_Image_80a7yk80a7yk80a7.png?raw=true" alt="Profile Photo">
+      <div class="dynamic-text">
+        <h2>About Me</h2>
+        <p>Hello! I'm <strong>Jintu Moni Bhuyan</strong>, a passionate researcher specializing in Remote Sensing, Carbon Dynamics, and UAV technology. My work integrates satellite and drone data with AI techniques to understand forest ecosystems, carbon cycling, and environmental changes. I aim to create innovative solutions for sustainable resource management and climate resilience.</p>
+      </div>
     </div>
-    
-    <div class="container">
-        <div class="profile">
-            <img src="https://github.com/jintubhuyan-2000.png" alt="Profile Photo">
-            <p>📞 +91 7002134518 | 📧 <a href="mailto:jintumb6@gmail.com">jintumb6@gmail.com</a></p>
-            <p>🔗 <a href="https://www.linkedin.com/in/jintu-moni-bhuyan-4700b51b1/" target="_blank">LinkedIn Profile</a></p>
-        </div>
 
-        <div class="section">
-            <h2>Research Experience</h2>
-            <p><strong>Project Research Associate</strong> (Aug 2024 - Present)<br>Indian Institute of Technology, Bombay<br>Research Project: Maharashtra Drone Mission<br>Sub Theme: Forest Dynamics (Related to Forest Fire)<br>Supervisor: Prof. Parmeshwar D. Udmale</p>
-            <p><strong>Project Research Assistant</strong> (June 2024 – Aug 2024)<br>Indian Institute of Technology, Bombay<br>Research Project: Maharashtra Drone Mission<br>Sub Theme: Forest Dynamics (Related to Forest Fire)<br>Supervisor: Prof. Parmeshwar D. Udmale</p>
-            <p><strong>Research Intern</strong> (Feb 2024 – May 2024)<br>International Water Management Institute (IWMI), Delhi, India<br>Research Theme/Project: Water Data Science and Digital Innovation<br>Supervisor: Dr. Surajit Ghosh, Regional Researcher – Water Risk and Data Sciences Specialist</p>
-        </div>
-        
-        <div class="section">
-            <h2>Education</h2>
-            <p>🎓 M.Tech. in Remote Sensing and GIS (CGPA: 8.48) 2022 - 2024<br>
-            (Specialization: Forest Resources and Ecosystem Analysis)<br>
-            Indian Institute of Remote Sensing, ISRO, Dehradun, India</p>
-            <p>🌍 M.Sc. in Environmental Science (CGPA: 8.81) 2020 - 2022<br>
-            Gauhati University, Assam, India</p>
-            <p>📖 B.Sc. in Geography (CGPA: 8.65) 2017 - 2020<br>
-            Gauhati University, Assam, India</p>
-        </div>
-
-
-    
-        <div class="section">
-            <h2>Academic Projects</h2>
-            <p>• M.Tech. Project: Carbon Bookkeeping for Large-Scale Tropical Deforestation in Eastern Himalayan Foothills, Northeast India</p>
-            <p>Supervisor: Dr. Subrata Nandy (Scientist SF, Indian Institute of Remote Sensing)</p>
-            <p>• M.Sc. Project: Geo-environmental Setting of a Proposed Bird Sanctuary: A Case Study of Satajaan Beel, Lakhimpur, Assam</p>
-            <p>Supervisor: Dr. Pallavi Sarma (Asst. Prof., Gauhati University)</p>
-        </div>
-
-
-        <div class="section">
-            <h2>Publications</h2>
-            <p>• Bhuyan, J.M., Nandy, S., Padalia, H. et al. (2025). Harnessing Time-Series Satellite Data and Deep Learning to Monitor Historical Patterns of Deforestation in Eastern Himalayan Foothills of India. J Indian Soc Remote Sens. DOI</p>
-            <p>• Bhuyan, J. M., & Sharma, P. (2023). A study on the water quality and the change detection of the aquatic vegetation of Satajaan beel, North Lakhimpur, Assam. Research Square. DOI</p>
-            <p>• Bhuyan, J. M. (2021). Environmental Degradation of Satajaan Beel, Lakhimpur, Assam. IJRASET, 9(9), 947–954. DOI</p>
-        </div>
-
-
-        <div class="section">
-            <h2>Paper/Poster Presentations</h2>
-            <p>• Bhuyan, J., Nandy, S. (2024). Monitoring Tropical Deforestation Using Time-Series Satellite Data and Deep Learning in Eastern Himalaya. IIRS Academia Meet, 2024. (Poster Presentation)</p>
-            <p>• Bhuyan, J., Yadav, M., & Kumar, B. (2023). Temporal Analysis of Urbanization and Urban Heat Island Development in Kamrup District, Assam. Hindi Sangusthi, IIRS-ISRS, 2023. (Paper Presentation)</p>
-            <p>• Deka, K., Bhuyan, J., & Pandey, K. (2023). GIS-based Assessment of Flood-Induced Ecological Vulnerability in Assam. ISG-ISRS National Symposium, 2023, Pune. (Paper Presentation)</p>
-        </div>
-
-        <div class="section">
-            <h2>Short Module Projects</h2>
-            <p>• Creating Cloud-based Web Applications for generating various indices and their 3D Visualisation. (2023) (URL: <a href="https://jintu-moni-bhuyan.users.earthengine.app/view/indextracter">Link</a>)<br>Collaborator: Mridul Yadav (Geoscience Department, IIRS)</p>
-            <p>• Seasonal variation analysis of land surface temperature (LST) with normalized difference vegetation (NDVI) index and estimation of evapotranspiration (ET) using Python. (2023)<br>Co-author: Prasun Kumar Gupta (Scientist SF, Geoinformatics, IIRS)</p>
-            <p>• Forest fire risk mapping using analytical hierarchy process (AHP) in GIS software: a case of Malkangiri, Odisha. (2022)<br>Co-author: Kakali Deka (Urban and Regional Studies Department, IIRS)</p>
-            <p>• Habitat suitability analysis using AHP for Indian Pangolin (Manis crassicaudata) in Motichur Block, Uttarakhand, India. (2022)<br>Collaborator: Aatreyee Nath (Forestry and Ecology Department, IIRS)</p>
-            <p>• Road network analysis using GIS techniques in the interest of finding the shortest routes for healthcare emergency situations, in Tezpur, Sonitpur, Assam. (2019)<br>Co-author: Anshuman Udipta Khanikar (Ast. Professor, Darrang College, Assam)</p>
-        </div>
-
-        <div class="section">
-            <h2>Technical Skills</h2>
-            <p>• <strong>Programming:</strong> Python (Proficient), R (Proficient), Matlab (Proficient)</p>
-            <p>• <strong>Software/Platforms:</strong> ArcGIS, QGIS, ERDAS, SNAP, Pix4D, eCognition, Google Earth Engine.</p>
-            <p>• <strong>Remote Sensing:</strong> Optical, LiDAR, Microwave, Thermal RS</p>
-            <p>• <strong>Languages:</strong> English (Proficient), Hindi, Assamese</p>
-        </div>
-        <div class="section">
-            <h2>Field Experience</h2>
-            <p>• Conducted field surveys for above-ground biomass estimation, carbon stock assessment, and ecological data collection in the foothills of the North-East Himalaya.</p>
-            <p>• Performed extensive ground truthing, validation of LULC classification using UAV and remote sensing data, and engaged in field measurements with spectroradiometric techniques for vegetation monitoring.</p>
-            <p>• Collected and analyzed water quality data, integrated plot-based analysis for comprehensive environmental assessments.</p>
-        </div>
-
-        <div class="section">
-            <h2>GitHub Repositories</h2>
-            <p>• <strong>GeeMapBot_WebApp:</strong> <a href="#">Jupyter Notebook</a> - Creative Commons Zero v1.0 Universal (Updated last month)</p>
-            <p>• <strong>GeeMapBot:</strong> <a href="#">Jupyter Notebook</a> (Updated on Feb 1)</p>
-            <p>• <strong>Scripts_DL_BundDetection:</strong> <a href="#">Jupyter Notebook</a> - Scripts related to bund detection and image segmentation (Updated on Jan 31)</p>
-            <p>• <strong>carbonfolium:</strong> <a href="#">JavaScript</a> - Interactive map visualization tool (Updated on Jan 31)</p>
-            <p>• <strong>indian_village_boundaries-master:</strong> <a href="#">Public Repository</a> (Updated on Jan 25)</p>
-            <p>• <strong>GEEAUTO:</strong> <a href="#">Jupyter Notebook</a> - GUI for downloading and analyzing GEE data (Updated on Jan 22)</p>
-            <p>• <strong>Habitat-Suitability-Mapping-IPYNB:</strong> <a href="#">Jupyter Notebook</a> - Habitat suitability analysis (Updated on Jan 1)</p>
-            <p>• <strong>Scripts_Python_IITBOMBAY:</strong> <a href="#">Jupyter Notebook</a> - Scripts for forest fire detection and assessment (Updated on Dec 31, 2024)</p>
-            <p>• <strong>Carbon-Matrix-V1.4:</strong> <a href="#">Python</a> - Carbon Matrix Calculator (Updated on Dec 30, 2024)</p>
-            <p>• <strong>Carbon-Matrix:</strong> <a href="#">Public Repository</a> (Updated on Dec 26, 2024)</p>
-            <p>• <strong>Above-Ground-Biomass-Random-Forest:</strong> <a href="#">Jupyter Notebook</a> (Updated on Aug 10, 2024)</p>
-            <p>• <strong>Random:</strong> <a href="#">Jupyter Notebook</a> - Various scripts (Updated on Aug 10, 2024)</p>
-            <p>• <strong>MTech-Projects-Repository:</strong> <a href="#">Jupyter Notebook</a> - Python scripts from M.Tech projects (Updated on Apr 1, 2024)</p>
-            <p>• <strong>CARBON-DYNAMICS:</strong> <a href="#">Python</a> (Updated on Apr 1, 2024)</p>
-            <p>• <strong>carbon_bookkeeping:</strong> <a href="#">Private Repository</a> - Net carbon emission from large-scale deforestation (Updated on Apr 1, 2024)</p>
-            <p>• <strong>carbon-bookkeeping:</strong> <a href="#">Public Repository</a> (Updated on Apr 1, 2024)</p>
-            <p>• <strong>MCDM_EODATA:</strong> <a href="#">Public Repository</a> (Updated on Feb 29, 2024)</p>
-            <p>• <strong>QRealTime:</strong> <a href="#">Forked Repository</a> - QGIS plugin for survey form creation (Updated on Jun 26, 2023)</p>
-            <p>• <strong>jintubhuyan-2000.github.io:</strong> <a href="#">JavaScript</a> (Updated on Jun 17, 2023)</p>
-            <p>• <strong>desktop-tutorial:</strong> <a href="#">Private Repository</a> - GitHub Desktop tutorial (Updated on Jun 21, 2020)</p>
-        </div>
-
-
-
-
-
-        <div class="section">
-            <h2>Contact</h2>
-            <p>📍 Flat No. 11, Lake Site CHS Ltd, Opp. IITB Main Gate, Powai, Mumbai</p>
-            <p>📧 Institutional Email: 30005896@iitb.ac.in</p>
-            <p>🔗 <a href="https://github.com/jintubhuyan-2000/CV/blob/main/CV_JINTUMONIBHUYAN.pdf" target="_blank">Download CV</a></p>
-        </div>
+    <!-- Second Dynamic Block -->
+    <div class="dynamic-block">
+      <img src="https://github.com/jintubhuyan-2000/Home/blob/main/WhatsApp%20Image%202025-08-03%20at%2012.35.41%20PM%20(1).jpeg?raw=true" alt="Experience Photo">
+      <div class="dynamic-text" id="experience">
+        <h2>Professional Experience</h2>
+        <p><strong>Project Research Associate</strong> (Aug 2024 - Present)<br>
+          Indian Institute of Technology, Bombay<br>
+          Research Project: Maharashtra Drone Mission<br>
+          Sub Theme: Forest Dynamics (Related to Forest Fire)<br>
+          Supervisor: Prof. Parmeshwar D. Udmale
+        </p>
+        <p><strong>Project Research Assistant</strong> (Jun 2024 – Aug 2024)<br>
+          Indian Institute of Technology, Bombay
+        </p>
+        <p><strong>Research Intern</strong> (Feb 2024 – May 2024)<br>
+          International Water Management Institute (IWMI), Delhi, India
+        </p>
+      </div>
     </div>
+
+    <!-- Research Interests -->
+    <div class="section" id="research">
+      <h2>Research Interests</h2>
+      <p>My core research focuses on:</p>
+      <ul>
+        <li>Forest Carbon Dynamics and Modeling</li>
+        <li>UAV and LiDAR for forest monitoring</li>
+        <li>Deep Learning for Land Use and Land Cover Classification</li>
+        <li>Carbon Emission Estimation and Climate Change</li>
+        <li>Sustainable Resource Management</li>
+      </ul>
+    </div>
+
+    <!-- Education -->
+    <div class="section" id="education">
+      <h2>Education</h2>
+      <p>🎓 <strong>M.Tech. in Remote Sensing and GIS</strong> (2022 - 2024)<br>
+      Indian Institute of Remote Sensing, ISRO, Dehradun, India (CGPA: 8.48)</p>
+      <p>🌍 <strong>M.Sc. in Environmental Science</strong> (2020 - 2022)<br>
+      Gauhati University, Assam, India (CGPA: 8.81)</p>
+      <p>📖 <strong>B.Sc. in Geography</strong> (2017 - 2020)<br>
+      Gauhati University, Assam, India (CGPA: 8.65)</p>
+    </div>
+
+    <!-- Publications -->
+    <div class="section" id="publications">
+      <h2>Publications</h2>
+      <p>• Bhuyan, J.M., Nandy, S., Padalia, H. et al. (2025). Harnessing Time-Series Satellite Data and Deep Learning to Monitor Historical Patterns of Deforestation in Eastern Himalayan Foothills of India. <em>J Indian Soc Remote Sens</em>.</p>
+      <p>• Bhuyan, J. M., & Sharma, P. (2023). A study on the water quality and the change detection of the aquatic vegetation of Satajaan beel, North Lakhimpur, Assam. <em>Research Square</em>.</p>
+      <p>• Bhuyan, J. M. (2021). Environmental Degradation of Satajaan Beel, Lakhimpur, Assam. <em>IJRASET</em>, 9(9), 947–954.</p>
+    </div>
+
+    <!-- Skills -->
+    <div class="section" id="skills">
+      <h2>Technical Skills</h2>
+      <p><strong>Programming:</strong> Python, R, Matlab</p>
+      <p><strong>Software/Platforms:</strong> ArcGIS, QGIS, ERDAS, SNAP, Pix4D, eCognition, Google Earth Engine</p>
+      <p><strong>Remote Sensing:</strong> Optical, LiDAR, Microwave, Thermal RS</p>
+      <p><strong>Languages:</strong> English, Hindi, Assamese</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="section" id="contact">
+      <h2>Contact</h2>
+      <p>📞 +91 7002134518</p>
+      <p>📧 Email: <a href="mailto:jintumb6@gmail.com">jintumb6@gmail.com</a></p>
+      <p>🔗 <a href="https://www.linkedin.com/in/jintu-moni-bhuyan-4700b51b1/" target="_blank">LinkedIn</a></p>
+      <p>📍 Mumbai, India</p>
+      <p><a href="https://github.com/jintubhuyan-2000/CV/blob/main/CV_JINTUMONIBHUYAN.pdf" target="_blank">Download CV</a></p>
+    </div>
+  </div>
 </body>
 </html>
