@@ -3,206 +3,949 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jintu Moni Bhuyan - Profile</title>
+  <title>Jintu Moni Bhuyan | Remote Sensing & Carbon Cycle Researcher</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
+    :root {
+      --primary-color: #1e3c72;
+      --secondary-color: #2a5298;
+      --accent-color: #4a7bd9;
+      --light-color: #f8f9fa;
+      --dark-color: #333;
+      --gray-color: #6c757d;
+      --border-radius: 8px;
+      --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s ease;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--dark-color);
+      background-color: #f9fafb;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
     /* Header Section */
     .header {
-      background: #1e3c72;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       color: white;
-      padding: 15px 0;
+      padding: 40px 0;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTIwMCA0MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTIwMCAzMDBjLTIwMCAwLTMwMC0xMDAtNTAwLTEwMHMtMzAwIDEwMC01MDAgMTAwLTMwMC0xMDAtNTAwLTEwMFMwIDMwMCAwIDMwMFY0MDBoMTIwMFYzMDB6IiBmaWxsPSIjMTczMDUwIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvZz48L3N2Zz4=');
+      opacity: 0.1;
+    }
+
+    .header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      position: relative;
+    }
+
+    .header p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+      position: relative;
     }
 
     /* Navigation Bar */
     .navbar {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
       display: flex;
-      justify-content: center;
-      background: #16325c;
-      padding: 10px 0;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
     }
-    .navbar a {
-      color: white;
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
       text-decoration: none;
-      padding: 10px 20px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .navbar a:hover {
-      background: #1e3c72;
-      border-radius: 5px;
     }
 
-    /* Container */
-    .container {
-      max-width: 1100px;
-      margin: 20px auto;
-      padding: 20px;
-      background: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
+    .nav-links {
+      display: flex;
+      list-style: none;
     }
 
-    /* Dynamic Block */
-    .dynamic-block {
+    .nav-links li {
+      margin-left: 30px;
+    }
+
+    .nav-links a {
+      color: var(--dark-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+      padding: 5px 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary-color);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 60px 0;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+    }
+
+    /* Profile Section */
+    .profile-section {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 60px;
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 40px;
+      box-shadow: var(--box-shadow);
     }
-    .dynamic-block img {
-      width: 280px;
+
+    .profile-image {
+      flex: 0 0 300px;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-image img {
+      width: 100%;
       height: auto;
-      border-radius: 10px;
-      border: 3px solid #1e3c72;
+      display: block;
+      transition: var(--transition);
     }
-    .dynamic-text {
+
+    .profile-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .profile-content {
       flex: 1;
-      margin-left: 20px;
-    }
-    .dynamic-text h2 {
-      color: #1e3c72;
     }
 
-    /* Sections */
-    .section {
+    .profile-content h2 {
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .profile-content p {
       margin-bottom: 20px;
-      padding: 15px;
-      border-left: 4px solid #1e3c72;
-      background: #f9f9f9;
-    }
-    h2 {
-      color: #1e3c72;
+      color: var(--gray-color);
+      font-size: 1.1rem;
     }
 
-    /* Links */
-    a {
-      color: #1e3c72;
+    .btn {
+      display: inline-block;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(30, 60, 114, 0.4);
+    }
+
+    /* Experience Section */
+    .experience-section {
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 40px;
+      box-shadow: var(--box-shadow);
+      margin-bottom: 40px;
+    }
+
+    .experience-item {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .experience-title {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .experience-date {
+      background-color: var(--light-color);
+      color: var(--primary-color);
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .experience-org {
+      font-size: 1.1rem;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+    }
+
+    /* Research Interests */
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .interest-card {
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 25px;
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+      border-top: 4px solid var(--accent-color);
+    }
+
+    .interest-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .interest-card i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .interest-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    /* Education Section */
+    .education-timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .education-timeline::before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: var(--accent-color);
+    }
+
+    .education-item {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 80px;
+    }
+
+    .education-item::before {
+      content: '';
+      position: absolute;
+      left: 22px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px var(--accent-color);
+    }
+
+    .education-degree {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .education-date {
+      color: var(--gray-color);
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    .education-org {
+      font-size: 1.1rem;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+    }
+
+    /* Publications Section */
+    .publication-item {
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: var(--box-shadow);
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .publication-title {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--dark-color);
+    }
+
+    .publication-authors {
+      color: var(--gray-color);
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .publication-journal {
+      color: var(--secondary-color);
+      font-weight: 500;
+    }
+
+    /* Skills Section */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .skill-category {
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 25px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .skill-category h3 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .skill-item {
+      margin-bottom: 15px;
+    }
+
+    .skill-name {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .skill-bar {
+      height: 8px;
+      background-color: #e9ecef;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .skill-level {
+      height: 100%;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      border-radius: 4px;
+    }
+
+    /* Contact Section */
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .contact-info {
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 30px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-item i {
+      width: 40px;
+      height: 40px;
+      background-color: var(--light-color);
+      color: var(--primary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      font-size: 1.1rem;
+    }
+
+    .contact-form {
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 30px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(74, 123, 217, 0.2);
+    }
+
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 50%;
+      margin: 0 10px;
+      transition: var(--transition);
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .social-link:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .dynamic-block {
+    .copyright {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .profile-section {
         flex-direction: column;
         text-align: center;
       }
-      .dynamic-text {
-        margin-left: 0;
-        margin-top: 20px;
+      
+      .profile-image {
+        flex: 0 0 auto;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 50px;
+        transition: var(--transition);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-links.active {
+        left: 0;
+      }
+      
+      .nav-links li {
+        margin: 15px 0;
+      }
+      
+      .header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .header p {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .profile-section,
+      .experience-section,
+      .skill-category,
+      .contact-info,
+      .contact-form {
+        padding: 25px;
+      }
+      
+      .section-title {
+        font-size: 1.7rem;
       }
     }
   </style>
 </head>
 <body>
   <!-- Header -->
-  <div class="header">
-    <h1>Jintu Moni Bhuyan</h1>
-    <p>Remote Sensing | Carbon Cycle Research | UAV & AI Expert</p>
-  </div>
+  <header class="header">
+    <div class="container">
+      <h1>Jintu Moni Bhuyan</h1>
+      <p>Remote Sensing | Carbon Cycle Research | UAV & AI Expert</p>
+    </div>
+  </header>
 
   <!-- Navigation Bar -->
-  <div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#research">Research Interests</a>
-    <a href="#publications">Publications</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </div>
-
-  <div class="container" id="home">
-    <!-- First Dynamic Block -->
-    <div class="dynamic-block">
-      <img src="https://github.com/jintubhuyan-2000/Home/blob/main/Gemini_Generated_Image_80a7yk80a7yk80a7.png?raw=true" alt="Profile Photo">
-      <div class="dynamic-text">
-        <h2>About Me</h2>
-        <p>Hello! I'm <strong>Jintu Moni Bhuyan</strong>, a passionate researcher specializing in Remote Sensing, Carbon Dynamics, and UAV technology. My work integrates satellite and drone data with AI techniques to understand forest ecosystems, carbon cycling, and environmental changes. I aim to create innovative solutions for sustainable resource management and climate resilience.</p>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">JMB</a>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
       </div>
-    </div>
-
-    <!-- Second Dynamic Block -->
-    <div class="dynamic-block">
-      <img src="https://github.com/jintubhuyan-2000/Home/blob/main/WhatsApp%20Image%202025-08-03%20at%2012.35.41%20PM%20(1).jpeg?raw=true" alt="Experience Photo">
-      <div class="dynamic-text" id="experience">
-        <h2>Professional Experience</h2>
-        <p><strong>Project Research Associate</strong> (Aug 2024 - Present)<br>
-          Indian Institute of Technology, Bombay<br>
-          Research Project: Maharashtra Drone Mission<br>
-          Sub Theme: Forest Dynamics (Related to Forest Fire)<br>
-          Supervisor: Prof. Parmeshwar D. Udmale
-        </p>
-        <p><strong>Project Research Assistant</strong> (Jun 2024 – Aug 2024)<br>
-          Indian Institute of Technology, Bombay
-        </p>
-        <p><strong>Research Intern</strong> (Feb 2024 – May 2024)<br>
-          International Water Management Institute (IWMI), Delhi, India
-        </p>
-      </div>
-    </div>
-
-    <!-- Research Interests -->
-    <div class="section" id="research">
-      <h2>Research Interests</h2>
-      <p>My core research focuses on:</p>
-      <ul>
-        <li>Forest Carbon Dynamics and Modeling</li>
-        <li>UAV and LiDAR for forest monitoring</li>
-        <li>Deep Learning for Land Use and Land Cover Classification</li>
-        <li>Carbon Emission Estimation and Climate Change</li>
-        <li>Sustainable Resource Management</li>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
+  </nav>
 
-    <!-- Education -->
-    <div class="section" id="education">
-      <h2>Education</h2>
-      <p>🎓 <strong>M.Tech. in Remote Sensing and GIS</strong> (2022 - 2024)<br>
-      Indian Institute of Remote Sensing, ISRO, Dehradun, India (CGPA: 8.48)</p>
-      <p>🌍 <strong>M.Sc. in Environmental Science</strong> (2020 - 2022)<br>
-      Gauhati University, Assam, India (CGPA: 8.81)</p>
-      <p>📖 <strong>B.Sc. in Geography</strong> (2017 - 2020)<br>
-      Gauhati University, Assam, India (CGPA: 8.65)</p>
-    </div>
+  <!-- Main Content -->
+  <main class="main-content container">
+    <!-- Home Section -->
+    <section id="home" class="section">
+      <div class="profile-section">
+        <div class="profile-image">
+          <img src="https://github.com/jintubhuyan-2000/Home/blob/main/Gemini_Generated_Image_80a7yk80a7yk80a7.png?raw=true" alt="Jintu Moni Bhuyan">
+        </div>
+        <div class="profile-content">
+          <h2>About Me</h2>
+          <p>I'm a passionate researcher specializing in Remote Sensing, Carbon Dynamics, and UAV technology. My work integrates satellite and drone data with AI techniques to understand forest ecosystems, carbon cycling, and environmental changes.</p>
+          <p>I aim to create innovative solutions for sustainable resource management and climate resilience through cutting-edge research and technology applications.</p>
+          <a href="#contact" class="btn">Get In Touch</a>
+          <a href="https://github.com/jintubhuyan-2000/CV/blob/main/CV_JINTUMONIBHUYAN.pdf" target="_blank" class="btn" style="margin-left: 10px;">Download CV</a>
+        </div>
+      </div>
+    </section>
 
-    <!-- Publications -->
-    <div class="section" id="publications">
-      <h2>Publications</h2>
-      <p>• Bhuyan, J.M., Nandy, S., Padalia, H. et al. (2025). Harnessing Time-Series Satellite Data and Deep Learning to Monitor Historical Patterns of Deforestation in Eastern Himalayan Foothills of India. <em>J Indian Soc Remote Sens</em>.</p>
-      <p>• Bhuyan, J. M., & Sharma, P. (2023). A study on the water quality and the change detection of the aquatic vegetation of Satajaan beel, North Lakhimpur, Assam. <em>Research Square</em>.</p>
-      <p>• Bhuyan, J. M. (2021). Environmental Degradation of Satajaan Beel, Lakhimpur, Assam. <em>IJRASET</em>, 9(9), 947–954.</p>
-    </div>
+    <!-- Research Interests -->
+    <section id="research" class="section">
+      <h2 class="section-title">Research Interests</h2>
+      <div class="interests-grid">
+        <div class="interest-card">
+          <i class="fas fa-tree"></i>
+          <h3>Forest Carbon Dynamics</h3>
+          <p>Modeling and monitoring carbon sequestration in forest ecosystems using remote sensing data.</p>
+        </div>
+        <div class="interest-card">
+          <i class="fas fa-drone"></i>
+          <h3>UAV & LiDAR Applications</h3>
+          <p>Utilizing drone technology and LiDAR for precise forest monitoring and 3D modeling.</p>
+        </div>
+        <div class="interest-card">
+          <i class="fas fa-brain"></i>
+          <h3>AI & Deep Learning</h3>
+          <p>Applying machine learning algorithms for land use classification and environmental analysis.</p>
+        </div>
+        <div class="interest-card">
+          <i class="fas fa-fire"></i>
+          <h3>Carbon Emission Estimation</h3>
+          <p>Quantifying carbon emissions from various sources to understand climate change impacts.</p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Skills -->
-    <div class="section" id="skills">
-      <h2>Technical Skills</h2>
-      <p><strong>Programming:</strong> Python, R, Matlab</p>
-      <p><strong>Software/Platforms:</strong> ArcGIS, QGIS, ERDAS, SNAP, Pix4D, eCognition, Google Earth Engine</p>
-      <p><strong>Remote Sensing:</strong> Optical, LiDAR, Microwave, Thermal RS</p>
-      <p><strong>Languages:</strong> English, Hindi, Assamese</p>
-    </div>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="experience-section">
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="experience-title">Project Research Associate</div>
+            <div class="experience-date">Aug 2024 - Present</div>
+          </div>
+          <div class="experience-org">Indian Institute of Technology, Bombay</div>
+          <p>Research Project: Maharashtra Drone Mission<br>
+          Sub Theme: Forest Dynamics (Related to Forest Fire)<br>
+          Supervisor: Prof. Parmeshwar D. Udmale</p>
+        </div>
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="experience-title">Project Research Assistant</div>
+            <div class="experience-date">Jun 2024 – Aug 2024</div>
+          </div>
+          <div class="experience-org">Indian Institute of Technology, Bombay</div>
+        </div>
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="experience-title">Research Intern</div>
+            <div class="experience-date">Feb 2024 – May 2024</div>
+          </div>
+          <div class="experience-org">International Water Management Institute (IWMI), Delhi, India</div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Contact -->
-    <div class="section" id="contact">
-      <h2>Contact</h2>
-      <p>📞 +91 7002134518</p>
-      <p>📧 Email: <a href="mailto:jintumb6@gmail.com">jintumb6@gmail.com</a></p>
-      <p>🔗 <a href="https://www.linkedin.com/in/jintu-moni-bhuyan-4700b51b1/" target="_blank">LinkedIn</a></p>
-      <p>📍 Mumbai, India</p>
-      <p><a href="https://github.com/jintubhuyan-2000/CV/blob/main/CV_JINTUMONIBHUYAN.pdf" target="_blank">Download CV</a></p>
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="education-timeline">
+        <div class="education-item">
+          <div class="education-degree">M.Tech. in Remote Sensing and GIS</div>
+          <div class="education-date">2022 - 2024</div>
+          <div class="education-org">Indian Institute of Remote Sensing, ISRO, Dehradun, India</div>
+          <p>CGPA: 8.48</p>
+        </div>
+        <div class="education-item">
+          <div class="education-degree">M.Sc. in Environmental Science</div>
+          <div class="education-date">2020 - 2022</div>
+          <div class="education-org">Gauhati University, Assam, India</div>
+          <p>CGPA: 8.81</p>
+        </div>
+        <div class="education-item">
+          <div class="education-degree">B.Sc. in Geography</div>
+          <div class="education-date">2017 - 2020</div>
+          <div class="education-org">Gauhati University, Assam, India</div>
+          <p>CGPA: 8.65</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+      <h2 class="section-title">Publications</h2>
+      <div class="publication-item">
+        <div class="publication-title">Harnessing Time-Series Satellite Data and Deep Learning to Monitor Historical Patterns of Deforestation in Eastern Himalayan Foothills of India</div>
+        <div class="publication-authors">Bhuyan, J.M., Nandy, S., Padalia, H. et al.</div>
+        <div class="publication-journal">J Indian Soc Remote Sens (2025)</div>
+      </div>
+      <div class="publication-item">
+        <div class="publication-title">A study on the water quality and the change detection of the aquatic vegetation of Satajaan beel, North Lakhimpur, Assam</div>
+        <div class="publication-authors">Bhuyan, J. M., & Sharma, P.</div>
+        <div class="publication-journal">Research Square (2023)</div>
+      </div>
+      <div class="publication-item">
+        <div class="publication-title">Environmental Degradation of Satajaan Beel, Lakhimpur, Assam</div>
+        <div class="publication-authors">Bhuyan, J. M.</div>
+        <div class="publication-journal">IJRASET, 9(9), 947–954 (2021)</div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Programming</h3>
+          <div class="skill-item">
+            <span class="skill-name">Python</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">R</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Matlab</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Software/Platforms</h3>
+          <div class="skill-item">
+            <span class="skill-name">ArcGIS, QGIS</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Google Earth Engine</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">ERDAS, SNAP, Pix4D</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Remote Sensing</h3>
+          <div class="skill-item">
+            <span class="skill-name">Optical & LiDAR</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Microwave & Thermal</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">UAV Data Processing</span>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>+91 7002134518</div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div><a href="mailto:jintumb6@gmail.com">jintumb6@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>Mumbai, India</div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-file-download"></i>
+            <div><a href="https://github.com/jintubhuyan-2000/CV/blob/main/CV_JINTUMONIBHUYAN.pdf" target="_blank">Download CV</a></div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/jintu-moni-bhuyan-4700b51b1/" target="_blank" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/jintubhuyan-2000" target="_blank" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:jintumb6@gmail.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <p class="copyright">© 2025 Jintu Moni Bhuyan. All Rights Reserved.</p>
     </div>
-  </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu if open
+          document.querySelector('.nav-links').classList.remove('active');
+        }
+      });
+    });
+
+    // Form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message! I will get back to you soon.');
+      this.reset();
+    });
+
+    // Active navigation highlighting
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if(pageYOffset >= sectionTop - 100) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if(link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
